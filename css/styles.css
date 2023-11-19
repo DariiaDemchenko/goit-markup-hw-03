@@ -2,12 +2,42 @@
     list-style-type: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .link {
     text-decoration: none;
 }
 
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+}
+
 button {
     cursor: pointer;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.link {
+    text-decoration: none;
 }
 
 body {
@@ -16,18 +46,57 @@ body {
     background-color: #fff;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    width: 1168px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* === Header === */
+.page-header .page-header-conteiner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-nav {
+    display: flex;
+    column-gap: 70px;
+    align-items: center;
+}
+
 .logo {
-   color:#4d5ae5;
-   font-family: "Raleway", sans-serif;
-   font-size: 18px;
-   font-weight: 700;
-   line-height: 1.17; 
-   letter-spacing: 0.03em;
-   text-transform: uppercase;
+    color: #4d5ae5;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 }
 
 .logo-plus {
     color: #2E2F42;
+}
+
+.menu {
+    display: flex;
+    column-gap: 40px;
 }
 
 .menu-link {
@@ -36,6 +105,9 @@ body {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .menu-link:hover,
@@ -45,6 +117,14 @@ body {
 
 .contact {
     font-style: normal;
+    text-align: left;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.contact-list {
+    display: flex;
+    column-gap: 40px;
 }
 
 .contact-link {
@@ -53,6 +133,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: left;
 }
 
 .contact-link:hover,
@@ -60,15 +141,25 @@ body {
     color: #404bbf;
 }
 
-/* Main content */
+/* === Main content === */
+.main {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-color: #2E2F42;
+    text-align: center;
+}
 
 .top-title {
-    color:  #FFF;
+    color: #FFF;
     text-align: center;
     font-size: 56px;
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;
+    width: 496px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
 }
 
 .button-main {
@@ -85,10 +176,31 @@ body {
 .button-main:hover,
 .button-main:focus {
     background: #404BBF;
-}    
+}
+
+/* === BENEFITS ==== */
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.benefits-list {
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+}
+
+.container {
+    width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 .title-second {
-    color:#2E2F42;
+    color: #2E2F42;
     text-align: center;
     font-size: 36px;
     font-weight: 700;
@@ -98,14 +210,16 @@ body {
 }
 
 .title-th {
-    color:  #2E2F42;
+    color: #2E2F42;
     font-size: 20px;
     font-weight: 500;
-    line-height: 1.2; 
+    line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-top: 32px;
+    margin-bottom: 8px;
 }
 
-.content {
+.description {
     color: #434455;
     font-size: 16px;
     font-weight: 400;
@@ -113,21 +227,61 @@ body {
     letter-spacing: 0.02em;
 }
 
-.center {
+/* === TEAM === */
+.team {
     text-align: center;
+    background-color: #F4F4FD;
 }
 
-.backround-navyblue {
-    background-color: #2E2F42;
+.team-list {
+    display: flex;
+    column-gap: 24px;
 }
 
-.backround-cloud {
-    background-color: #F4F4FD;;
-}
-
-.backround-white {
+.team-card {
     background-color: #fff;
+    margin-top: 72px;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    padding-bottom: 32px;
 }
+
+/* === PORTFOLIO === */
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+    align-items: center;
+    margin-top: 72px;
+}
+
+.portfolio-card {
+    border: 1px solid #E7E9FC;
+    padding-bottom: 32px;
+    width: 360px;
+}
+
+.portfolio-card-description {
+    padding-left: 16px;
+}
+
+/* === FOTTER === */
+
+.footer {
+    background-color: #2E2F42;
+    padding-top: 121.5px;
+    padding-bottom: 100px;
+    padding-left: 156px;
+}
+
+.description-footer {
+    color: #F4F4FD;
+    width: 264px;
+    margin-top: 16px;
+}
+
 .cloud {
     color: #F4F4FD;
 }
