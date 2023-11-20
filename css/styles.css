@@ -309,9 +309,10 @@ body {
 }
 
 .description-footer {
+    color: #F4F4FD;
     max-width: 264px;
     margin-top: 17.5px;
-    color: #F4F4FD;
+
 }
 
 .cloud {
